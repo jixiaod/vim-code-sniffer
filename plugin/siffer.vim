@@ -207,12 +207,12 @@ function! <SID>DoxygenFileFunc()
   exec "normal o".s:interCommentTag
   exec "normal o".s:interCommentTag.g:DoxygenToolkit_phpversion_string
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag.g:DoxygenToolkit_category_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag.g:DoxygenToolkit_package_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_author_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag.g:DoxygenToolkit_copyright_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag.g:DoxygenToolkit_license_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag.g:DoxygenToolkit_link_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag_pre.g:DoxygenToolkit_category_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag_pre.g:DoxygenToolkit_package_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag_pre.g:DoxygenToolkit_author_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag_pre.g:DoxygenToolkit_copyright_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag_pre.g:DoxygenToolkit_license_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag_pre.g:DoxygenToolkit_link_string
   if ( g:DoxygenToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
