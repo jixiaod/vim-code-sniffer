@@ -9,131 +9,131 @@ let s:sniffer_copyright_defalut_string   = "2014-2016 Moji Fengyun Software Tech
 let s:sniffer_license_defalut_string     = "license from Moji Fengyun Software Technology Development Co., Ltd."
 let s:sniffer_link_default_string        = "http://www.moji.com"
 
-if !exists("g:DoxygenToolkit_brief_string")
-  let g:DoxygenToolkit_brief_string = s:sniffer_brief_defalut_string
+if !exists("g:SnifferToolkit_brief_string")
+  let g:SnifferToolkit_brief_string = s:sniffer_brief_defalut_string
 endif
-if !exists("g:DoxygenToolkit_phpversion_string")
-  let g:DoxygenToolkit_phpversion_string = s:sniffer_phpversion_default_string
+if !exists("g:SnifferToolkit_phpversion_string")
+  let g:SnifferToolkit_phpversion_string = s:sniffer_phpversion_default_string
 endif
-if !exists("g:DoxygenToolkit_category_string")
-  let g:DoxygenToolkit_category_string = s:sniffer_category_default_string
+if !exists("g:SnifferToolkit_category_string")
+  let g:SnifferToolkit_category_string = s:sniffer_category_default_string
 endif
-if !exists("g:DoxygenToolkit_package_string")
-  let g:DoxygenToolkit_package_string = s:sniffer_package_default_string
+if !exists("g:SnifferToolkit_package_string")
+  let g:SnifferToolkit_package_string = s:sniffer_package_default_string
 endif
-if !exists("g:DoxygenToolkit_version_string")
-  let g:DoxygenToolkit_version_string = s:sniffer_version_default_string
+if !exists("g:SnifferToolkit_version_string")
+  let g:SnifferToolkit_version_string = s:sniffer_version_default_string
 endif
-if !exists("g:DoxygenToolkit_author_string")
-  let g:DoxygenToolkit_author_string = s:sniffer_author_default_string
+if !exists("g:SnifferToolkit_author_string")
+  let g:SnifferToolkit_author_string = s:sniffer_author_default_string
 endif
-if !exists("g:DoxygenToolkit_copyright_string")
-  let g:DoxygenToolkit_copyright_string = s:sniffer_copyright_defalut_string
+if !exists("g:SnifferToolkit_copyright_string")
+  let g:SnifferToolkit_copyright_string = s:sniffer_copyright_defalut_string
 endif
-if !exists("g:DoxygenToolkit_license_string")
-  let g:DoxygenToolkit_license_string = s:sniffer_license_defalut_string
+if !exists("g:SnifferToolkit_license_string")
+  let g:SnifferToolkit_license_string = s:sniffer_license_defalut_string
 endif
-if !exists("g:DoxygenToolkit_link_string")
-  let g:DoxygenToolkit_link_string = s:sniffer_link_default_string
-endif
-
-if !exists("g:DoxygenToolkit_categoryTag_pre")
-    let g:DoxygenToolkit_categoryTag_pre = "@category "
-endif
-if !exists("g:DoxygenToolkit_packageTag_pre")
-    let g:DoxygenToolkit_packageTag_pre = "@package "
-endif
-if !exists("g:DoxygenToolkit_versionTag_pre")
-  let g:DoxygenToolkit_versionTag_pre = "@version "
-endif
-if !exists("g:DoxygenToolkit_authorTag_pre")
-  let g:DoxygenToolkit_authorTag_pre = "@author "
-endif
-if !exists("g:DoxygenToolkit_copyrightTag_pre")
-  let g:DoxygenToolkit_copyrightTag_pre = "@copyright "
-endif
-if !exists("g:DoxygenToolkit_licenseTag_pre")
-  let g:DoxygenToolkit_licenseTag_pre = "@license"
-endif
-if !exists("g:DoxygenToolkit_linkTag_pre")
-  let g:DoxygenToolkit_linkTag_pre = "@link"
+if !exists("g:SnifferToolkit_link_string")
+  let g:SnifferToolkit_link_string = s:sniffer_link_default_string
 endif
 
-if !exists("g:DoxygenToolkit_blockTag")
-  let g:DoxygenToolkit_blockTag = "@name "
+if !exists("g:SnifferToolkit_categoryTag_pre")
+    let g:SnifferToolkit_categoryTag_pre = "@category "
 endif
-if !exists("g:DoxygenToolkit_briefTag_pre")
-  let g:DoxygenToolkit_briefTag_pre = "@brief "
+if !exists("g:SnifferToolkit_packageTag_pre")
+    let g:SnifferToolkit_packageTag_pre = "@package "
 endif
-if !exists("g:DoxygenToolkit_briefTag_post")
-  let g:DoxygenToolkit_briefTag_post = ""
+if !exists("g:SnifferToolkit_versionTag_pre")
+  let g:SnifferToolkit_versionTag_pre = "@version "
 endif
-if !exists("g:DoxygenToolkit_templateParamTag_pre")
-  let g:DoxygenToolkit_templateParamTag_pre = "@tparam "
+if !exists("g:SnifferToolkit_authorTag_pre")
+  let g:SnifferToolkit_authorTag_pre = "@author "
 endif
-if !exists("g:DoxygenToolkit_templateParamTag_post")
-  let g:DoxygenToolkit_templateParamTag_post = ""
+if !exists("g:SnifferToolkit_copyrightTag_pre")
+  let g:SnifferToolkit_copyrightTag_pre = "@copyright "
 endif
-if !exists("g:DoxygenToolkit_paramTag_pre")
-  let g:DoxygenToolkit_paramTag_pre = "@param "
+if !exists("g:SnifferToolkit_licenseTag_pre")
+  let g:SnifferToolkit_licenseTag_pre = "@license "
 endif
-if !exists("g:DoxygenToolkit_paramTag_post")
-  let g:DoxygenToolkit_paramTag_post = ""
-endif
-if !exists("g:DoxygenToolkit_returnTag")
-  let g:DoxygenToolkit_returnTag = "@return "
-endif
-if !exists("g:DoxygenToolkit_throwTag_pre")
-  let g:DoxygenToolkit_throwTag_pre = "@throw " " @exception is also valid
-endif
-if !exists("g:DoxygenToolkit_throwTag_post")
-  let g:DoxygenToolkit_throwTag_post = ""
-endif
-if !exists("g:DoxygenToolkit_blockHeader")
-  let g:DoxygenToolkit_blockHeader = ""
-endif
-if !exists("g:DoxygenToolkit_blockFooter")
-  let g:DoxygenToolkit_blockFooter = ""
+if !exists("g:SnifferToolkit_linkTag_pre")
+  let g:SnifferToolkit_linkTag_pre = "@link "
 endif
 
-if !exists("g:DoxygenToolkit_cinoptions")
-    let g:DoxygenToolkit_cinoptions = "c1C1"
+if !exists("g:SnifferToolkit_blockTag")
+  let g:SnifferToolkit_blockTag = "@name "
 endif
-if !exists("g:DoxygenToolkit_startCommentTag ")
-  let g:DoxygenToolkit_startCommentTag = "/** "
-  let g:DoxygenToolkit_startCommentBlock = "/* "
+if !exists("g:SnifferToolkit_briefTag_pre")
+  let g:SnifferToolkit_briefTag_pre = "@brief "
 endif
-if !exists("g:DoxygenToolkit_interCommentTag ")
-  let g:DoxygenToolkit_interCommentTag = "* "
+if !exists("g:SnifferToolkit_briefTag_post")
+  let g:SnifferToolkit_briefTag_post = ""
 endif
-if !exists("g:DoxygenToolkit_interCommentBlock ")
-  let g:DoxygenToolkit_interCommentBlock = "* "
+if !exists("g:SnifferToolkit_templateParamTag_pre")
+  let g:SnifferToolkit_templateParamTag_pre = "@tparam "
 endif
-if !exists("g:DoxygenToolkit_endCommentTag ")
-  let g:DoxygenToolkit_endCommentTag = "*/"
-  let g:DoxygenToolkit_endCommentBlock = "*/"
+if !exists("g:SnifferToolkit_templateParamTag_post")
+  let g:SnifferToolkit_templateParamTag_post = ""
 endif
-if exists("g:DoxygenToolkit_commentType")
-  if ( g:DoxygenToolkit_commentType == "C++" )
-    let g:DoxygenToolkit_startCommentTag = "/// "
-    let g:DoxygenToolkit_interCommentTag = "/// "
-    let g:DoxygenToolkit_endCommentTag = ""
-    let g:DoxygenToolkit_startCommentBlock = "// "
-    let g:DoxygenToolkit_interCommentBlock = "// "
-    let g:DoxygenToolkit_endCommentBlock = ""
+if !exists("g:SnifferToolkit_paramTag_pre")
+  let g:SnifferToolkit_paramTag_pre = "@param "
+endif
+if !exists("g:SnifferToolkit_paramTag_post")
+  let g:SnifferToolkit_paramTag_post = ""
+endif
+if !exists("g:SnifferToolkit_returnTag")
+  let g:SnifferToolkit_returnTag = "@return "
+endif
+if !exists("g:SnifferToolkit_throwTag_pre")
+  let g:SnifferToolkit_throwTag_pre = "@throw " " @exception is also valid
+endif
+if !exists("g:SnifferToolkit_throwTag_post")
+  let g:SnifferToolkit_throwTag_post = ""
+endif
+if !exists("g:SnifferToolkit_blockHeader")
+  let g:SnifferToolkit_blockHeader = ""
+endif
+if !exists("g:SnifferToolkit_blockFooter")
+  let g:SnifferToolkit_blockFooter = ""
+endif
+
+if !exists("g:SnifferToolkit_cinoptions")
+    let g:SnifferToolkit_cinoptions = "c1C1"
+endif
+if !exists("g:SnifferToolkit_startCommentTag ")
+  let g:SnifferToolkit_startCommentTag = "/** "
+  let g:SnifferToolkit_startCommentBlock = "/* "
+endif
+if !exists("g:SnifferToolkit_interCommentTag ")
+  let g:SnifferToolkit_interCommentTag = "* "
+endif
+if !exists("g:SnifferToolkit_interCommentBlock ")
+  let g:SnifferToolkit_interCommentBlock = "* "
+endif
+if !exists("g:SnifferToolkit_endCommentTag ")
+  let g:SnifferToolkit_endCommentTag = "*/"
+  let g:SnifferToolkit_endCommentBlock = "*/"
+endif
+if exists("g:SnifferToolkit_commentType")
+  if ( g:SnifferToolkit_commentType == "C++" )
+    let g:SnifferToolkit_startCommentTag = "/// "
+    let g:SnifferToolkit_interCommentTag = "/// "
+    let g:SnifferToolkit_endCommentTag = ""
+    let g:SnifferToolkit_startCommentBlock = "// "
+    let g:SnifferToolkit_interCommentBlock = "// "
+    let g:SnifferToolkit_endCommentBlock = ""
   else
-    let g:DoxygenToolkit_commentType = "C"
+    let g:SnifferToolkit_commentType = "C"
   endif
 else
-  let g:DoxygenToolkit_commentType = "C"
+  let g:SnifferToolkit_commentType = "C"
 endif
 
 " Compact documentation
 " /**
 "  * \brief foo      --->    /** \brief foo */
 "  */
-if !exists("g:DoxygenToolkit_compactOneLineDoc")
-  let g:DoxygenToolkit_compactOneLineDoc = "no"
+if !exists("g:SnifferToolkit_compactOneLineDoc")
+  let g:SnifferToolkit_compactOneLineDoc = "no"
 endif
 " /**
 "  * \brief foo             /**
@@ -142,78 +142,78 @@ endif
 "  *                         * \return
 "  * \return                 */
 "  */
-if !exists("g:DoxygenToolkit_compactDoc")
-  let g:DoxygenToolkit_compactDoc = "no"
+if !exists("g:SnifferToolkit_compactDoc")
+  let g:SnifferToolkit_compactDoc = "no"
 endif
 
 " Necessary '\<' and '\>' will be added to each item of the list.
 let s:ignoreForReturn = ['template', 'explicit', 'inline', 'static', 'virtual', 'void\([[:blank:]]*\*\)\@!', 'const', 'volatile', 'struct', 'extern']
-if !exists("g:DoxygenToolkit_ignoreForReturn")
-  let g:DoxygenToolkit_ignoreForReturn = s:ignoreForReturn[:]
+if !exists("g:SnifferToolkit_ignoreForReturn")
+  let g:SnifferToolkit_ignoreForReturn = s:ignoreForReturn[:]
 else
-  let g:DoxygenToolkit_ignoreForReturn += s:ignoreForReturn
+  let g:SnifferToolkit_ignoreForReturn += s:ignoreForReturn
 endif
 unlet s:ignoreForReturn
 
 " Maximum number of lines to check for function parameters
-if !exists("g:DoxygenToolkit_maxFunctionProtoLines")
-  let g:DoxygenToolkit_maxFunctionProtoLines = 10
+if !exists("g:SnifferToolkit_maxFunctionProtoLines")
+  let g:SnifferToolkit_maxFunctionProtoLines = 10
 endif
 
 " Add name of function/class/struct... after pre brief tag if you want
-if !exists("g:DoxygenToolkit_briefTag_className")
-  let g:DoxygenToolkit_briefTag_className = "no"
+if !exists("g:SnifferToolkit_briefTag_className")
+  let g:SnifferToolkit_briefTag_className = "no"
 endif
-if !exists("g:DoxygenToolkit_briefTag_structName")
-  let g:DoxygenToolkit_briefTag_structName = "no"
+if !exists("g:SnifferToolkit_briefTag_structName")
+  let g:SnifferToolkit_briefTag_structName = "no"
 endif
-if !exists("g:DoxygenToolkit_briefTag_enumName")
-  let g:DoxygenToolkit_briefTag_enumName = "no"
+if !exists("g:SnifferToolkit_briefTag_enumName")
+  let g:SnifferToolkit_briefTag_enumName = "no"
 endif
-if !exists("g:DoxygenToolkit_briefTag_namespaceName")
-  let g:DoxygenToolkit_briefTag_namespaceName = "no"
+if !exists("g:SnifferToolkit_briefTag_namespaceName")
+  let g:SnifferToolkit_briefTag_namespaceName = "no"
 endif
-if !exists("g:DoxygenToolkit_briefTag_funcName")
-  let g:DoxygenToolkit_briefTag_funcName = "no"
+if !exists("g:SnifferToolkit_briefTag_funcName")
+  let g:SnifferToolkit_briefTag_funcName = "no"
 endif
 
 " Keep empty line (if any) between comment and function/class/...
-if !exists("g:DoxygenToolkit_keepEmptyLineAfterComment")
-  let g:DoxygenToolkit_keepEmptyLineAfterComment = "no"
+if !exists("g:SnifferToolkit_keepEmptyLineAfterComment")
+  let g:SnifferToolkit_keepEmptyLineAfterComment = "no"
 endif
 
 " PYTHON specific
 """""""""""""""""
 " Remove automatically self parameter from function to avoid its documantation
-if !exists("g:DoxygenToolkit_python_autoRemoveSelfParam")
-  let g:DoxygenToolkit_python_autoRemoveSelfParam = "yes"
+if !exists("g:SnifferToolkit_python_autoRemoveSelfParam")
+  let g:SnifferToolkit_python_autoRemoveSelfParam = "yes"
 endif
 " Consider functions as if they always return something (default: yes)
-if !exists("g:DoxygenToolkit_python_autoFunctionReturn")
-  let g:DoxygenToolkit_python_autoFunctionReturn = "yes"
+if !exists("g:SnifferToolkit_python_autoFunctionReturn")
+  let g:SnifferToolkit_python_autoFunctionReturn = "yes"
 endif
 
 
 """"""""""""""""""""""""""
-" Doxygen file comment
+" Sniffer file comment
 """"""""""""""""""""""""""
-function! <SID>DoxygenFileFunc()
+function! <SID>SnifferFileFunc()
   call s:InitializeParameters()
 
   " Begin to write skeleton
   let l:insertionMode = s:StartDocumentationBlock()
-  exec "normal ".l:insertionMode." ".s:interCommentTag.g:DoxygenToolkit_brief_string
+  exec "normal ".l:insertionMode." ".s:interCommentTag.g:SnifferToolkit_brief_string
   mark d
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_phpversion_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_phpversion_string
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag_pre.g:DoxygenToolkit_category_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag_pre.g:DoxygenToolkit_package_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag_pre.g:DoxygenToolkit_author_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag_pre.g:DoxygenToolkit_copyright_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag_pre.g:DoxygenToolkit_license_string
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag_pre.g:DoxygenToolkit_link_string
-  if ( g:DoxygenToolkit_endCommentTag != "" )
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_categoryTag_pre.g:SnifferToolkit_category_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_packageTag_pre.g:SnifferToolkit_package_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_authorTag_pre.g:SnifferToolkit_author_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_copyrightTag_pre.g:SnifferToolkit_copyright_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_licenseTag_pre.g:SnifferToolkit_license_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_linkTag_pre.g:SnifferToolkit_link_string
+  if ( g:SnifferToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
 
@@ -225,26 +225,26 @@ function! <SID>DoxygenFileFunc()
 endfunction
 
 """"""""""""""""""""""""""
-" Doxygen class comment
+" Sniffer class comment
 """"""""""""""""""""""""""
-function! <SID>DoxygenClassFunc()
+function! <SID>SnifferClassFunc()
   call s:InitializeParameters()
 
   " Begin to write skeleton
   let l:insertionMode = s:StartDocumentationBlock()
-  exec "normal ".l:insertionMode." ".s:interCommentTag.g:DoxygenToolkit_briefString
+  exec "normal ".l:insertionMode." ".s:interCommentTag.g:SnifferToolkit_brief_string
   mark d
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_phpversionTag
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_phpversion_string
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_versionTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag
-  if ( g:DoxygenToolkit_endCommentTag != "" )
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_categoryTag_pre.g:SnifferToolkit_category_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_packageTag_pre.g:SnifferToolkit_package_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_authorTag_pre.g:SnifferToolkit_author_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_copyrightTag_pre.g:SnifferToolkit_copyright_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_licenseTag_pre.g:SnifferToolkit_copyright_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_versionTag_pre.g:SnifferToolkit_version_string
+  exec "normal o".s:interCommentTag.g:SnifferToolkit_linkTag_pre.g:SnifferToolkit_link_string
+  if ( g:SnifferToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
 
@@ -257,13 +257,13 @@ endfunction
 
 
 """"""""""""""""""""""""""
-" DoxygenBlockFunc
+" SnifferBlockFunc
 """"""""""""""""""""""""""
-function! <SID>DoxygenBlockFunc()
+function! <SID>SnifferBlockFunc()
   call s:InitializeParameters()
 
   let l:insertionMode = s:StartDocumentationBlock()
-  exec "normal ".l:insertionMode.s:interCommentTag.g:DoxygenToolkit_blockTag
+  exec "normal ".l:insertionMode.s:interCommentTag.g:SnifferToolkit_blockTag
   mark d
   exec "normal o".s:interCommentTag."@{ ".s:endCommentTag
   exec "normal o".strpart( s:startCommentTag, 0, 1 )
@@ -278,7 +278,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Main comment function for class, attribute, function...
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! <SID>DoxygenCommentFunc()
+function! <SID>SnifferCommentFunc()
 
   " Initialize default templates.
   " Assure compatibility with Python for classes (cf. endDocPattern).
@@ -333,7 +333,7 @@ function! <SID>DoxygenCommentFunc()
   endif
 
   " Remove unwanted lines (ie: jump to the first significant line)
-  if( g:DoxygenToolkit_keepEmptyLineAfterComment == "no" )
+  if( g:SnifferToolkit_keepEmptyLineAfterComment == "no" )
     " This erase previous mark
     mark d
   endif
@@ -344,7 +344,7 @@ function! <SID>DoxygenCommentFunc()
   let l:count = 0
   let l:throwCompleted = 0
   let l:endReadPattern = l:endDocPattern
-  while( l:endDocFound == 0 && l:count < g:DoxygenToolkit_maxFunctionProtoLines )
+  while( l:endDocFound == 0 && l:count < g:SnifferToolkit_maxFunctionProtoLines )
     let l:lineBuffer = s:RemoveComments( l:lineBuffer )
     " Valid only for cpp. For Python it must be 'class ...:' or 'def ...:' or
     " '... EOL'.
@@ -440,7 +440,7 @@ function! <SID>DoxygenCommentFunc()
   endif
 
   " Remove the function/class/... name when it is not necessary
-  if( ( l:doc.type == "class" && g:DoxygenToolkit_briefTag_className != "yes" ) || ( l:doc.type == "struct" && g:DoxygenToolkit_briefTag_structName != "yes" ) || ( l:doc.type == "enum" && g:DoxygenToolkit_briefTag_enumName != "yes" ) || ( l:doc.type == "namespace" && g:DoxygenToolkit_briefTag_namespaceName != "yes" ) || ( l:doc.type == "function" && g:DoxygenToolkit_briefTag_funcName != "yes" ) )
+  if( ( l:doc.type == "class" && g:SnifferToolkit_briefTag_className != "yes" ) || ( l:doc.type == "struct" && g:SnifferToolkit_briefTag_structName != "yes" ) || ( l:doc.type == "enum" && g:SnifferToolkit_briefTag_enumName != "yes" ) || ( l:doc.type == "namespace" && g:SnifferToolkit_briefTag_namespaceName != "yes" ) || ( l:doc.type == "function" && g:SnifferToolkit_briefTag_funcName != "yes" ) )
     let l:doc.name = "None"
 
   " Remove namespace from the name of the class/function...
@@ -452,38 +452,38 @@ function! <SID>DoxygenCommentFunc()
   """""""""""""""""""""""""""""""""
 
   call s:InitializeParameters()
-  if( s:CheckFileType() == "python" && l:doc.type == "function" && g:DoxygenToolkit_python_autoFunctionReturn == "yes" )
+  if( s:CheckFileType() == "python" && l:doc.type == "function" && g:SnifferToolkit_python_autoFunctionReturn == "yes" )
     let l:doc.returns = "yes"
   endif
 
   " Header
   exec "normal `d" 
-  if( g:DoxygenToolkit_blockHeader != "" )
+  if( g:SnifferToolkit_blockHeader != "" )
     exec "normal O".strpart( s:startCommentBlock, 0, 1 )
-    exec "normal A".strpart( s:startCommentBlock, 1 ).g:DoxygenToolkit_blockHeader.s:endCommentBlock
+    exec "normal A".strpart( s:startCommentBlock, 1 ).g:SnifferToolkit_blockHeader.s:endCommentBlock
     exec "normal `d" 
   endif
  
   " Brief
-  if( g:DoxygenToolkit_compactOneLineDoc =~ "yes" && l:doc.returns != "yes" && len( l:doc.params ) == 0 )
+  if( g:SnifferToolkit_compactOneLineDoc =~ "yes" && l:doc.returns != "yes" && len( l:doc.params ) == 0 )
     let s:compactOneLineDoc = "yes"
     exec "normal O".strpart( s:startCommentTag, 0, 1 )
-    exec "normal A".strpart( s:startCommentTag, 1 ).g:DoxygenToolkit_briefTag_pre
+    exec "normal A".strpart( s:startCommentTag, 1 ).g:SnifferToolkit_briefTag_pre
   else
     let s:compactOneLineDoc = "no"
     let l:insertionMode = s:StartDocumentationBlock()
-    exec "normal ".l:insertionMode.s:interCommentTag.g:DoxygenToolkit_briefTag_pre
+    exec "normal ".l:insertionMode.s:interCommentTag.g:SnifferToolkit_briefTag_pre
   endif
   if( l:doc.name != "None" )
     exec "normal A".l:doc.name." "
   endif
-  exec "normal A".g:DoxygenToolkit_briefTag_post
+  exec "normal A".g:SnifferToolkit_briefTag_post
 
   " Mark the line where the cursor will be positionned.
   mark d
 
   " Arguments/parameters
-  if( g:DoxygenToolkit_compactDoc =~ "yes" )
+  if( g:SnifferToolkit_compactDoc =~ "yes" )
     let s:insertEmptyLine = 0
   else
     let s:insertEmptyLine = 1
@@ -493,27 +493,27 @@ function! <SID>DoxygenCommentFunc()
       exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
       let s:insertEmptyLine = 0
     endif
-    exec "normal o".s:interCommentTag.g:DoxygenToolkit_templateParamTag_pre.param.g:DoxygenToolkit_templateParamTag_post
+    exec "normal o".s:interCommentTag.g:SnifferToolkit_templateParamTag_pre.param.g:SnifferToolkit_templateParamTag_post
   endfor
   for param in l:doc.params
     if( s:insertEmptyLine == 1 )
       exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
       let s:insertEmptyLine = 0
     endif
-    exec "normal o".s:interCommentTag.g:DoxygenToolkit_paramTag_pre.param.g:DoxygenToolkit_paramTag_post
+    exec "normal o".s:interCommentTag.g:SnifferToolkit_paramTag_pre.param.g:SnifferToolkit_paramTag_post
   endfor
 
   " Returned value
   if( l:doc.returns == "yes" )
-    if( g:DoxygenToolkit_compactDoc != "yes" )
+    if( g:SnifferToolkit_compactDoc != "yes" )
       exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
     endif
-    exec "normal o".s:interCommentTag.g:DoxygenToolkit_returnTag
+    exec "normal o".s:interCommentTag.g:SnifferToolkit_returnTag
   endif
 
   " Exception (throw) values (cpp only)
   if( len( l:doc.throws ) > 0 )
-    if( g:DoxygenToolkit_compactDoc =~ "yes" )
+    if( g:SnifferToolkit_compactDoc =~ "yes" )
       let s:insertEmptyLine = 0
     else
       let s:insertEmptyLine = 1
@@ -523,7 +523,7 @@ function! <SID>DoxygenCommentFunc()
         exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
         let s:insertEmptyLine = 0
       endif
-      exec "normal o".s:interCommentTag.g:DoxygenToolkit_throwTag_pre.param.g:DoxygenToolkit_throwTag_post
+      exec "normal o".s:interCommentTag.g:SnifferToolkit_throwTag_pre.param.g:SnifferToolkit_throwTag_post
     endfor
   endif
 
@@ -540,9 +540,9 @@ function! <SID>DoxygenCommentFunc()
   endif
 
   " Footer
-  if ( g:DoxygenToolkit_blockFooter != "" )
+  if ( g:SnifferToolkit_blockFooter != "" )
     exec "normal o".strpart( s:startCommentBlock, 0, 1 )
-    exec "normal A".strpart( s:startCommentBlock, 1 ).g:DoxygenToolkit_blockFooter.s:endCommentBlock
+    exec "normal A".strpart( s:startCommentBlock, 1 ).g:SnifferToolkit_blockFooter.s:endCommentBlock
   endif
   exec "normal `d"
 
@@ -552,20 +552,6 @@ function! <SID>DoxygenCommentFunc()
   else
     startinsert!
   endif
-
-  " DEBUG purpose only
-  "call s:WarnMsg( "Found a ".l:doc.type." named ".l:doc.name." (env: ".s:CheckFileType().")." )
-  "if( l:doc.type == "function" )
-  "  let l:funcReturn = "returns something."
-  "  if( l:doc.returns == "" )
-  "    let l:funcReturn = "doesn't return anything."
-  "  endif
-  "  call s:WarnMsg( " - which ".l:funcReturn )
-  "  call s:WarnMsg( " - which has following parameter(s):" )
-  "  for param in l:doc.params
-  "    call s:WarnMsg( "   - ".param )
-  "  endfor
-  "endif
 
 endfunction
 
@@ -649,7 +635,7 @@ function! s:ParseFunctionParameters( lineBuffer, doc )
   if( s:CheckFileType() == "cpp" )
     let l:functionBuffer = strpart( a:lineBuffer, 0, l:paramPosition )
     " Remove unnecessary elements
-    for ignored in g:DoxygenToolkit_ignoreForReturn
+    for ignored in g:SnifferToolkit_ignoreForReturn
       let l:functionBuffer = substitute( l:functionBuffer, '\<'.ignored.'\>', '', 'g' )
     endfor
     let l:functionReturnAndName = split( l:functionBuffer, '[[:blank:]*]' )
@@ -711,7 +697,7 @@ function! s:ParseFunctionParameters( lineBuffer, doc )
   if( s:CheckFileType() == "cpp" )
     call filter( l:params, 'v:val !~ "void"' )
   else
-    if( g:DoxygenToolkit_python_autoRemoveSelfParam == "yes" )
+    if( g:SnifferToolkit_python_autoRemoveSelfParam == "yes" )
       call filter( l:params, 'v:val !~ "self"' )
     endif
   endif
@@ -803,12 +789,12 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! s:InitializeParameters()
   if( s:CheckFileType() == "cpp" )
-    let s:startCommentTag   = g:DoxygenToolkit_startCommentTag
-    let s:interCommentTag   = g:DoxygenToolkit_interCommentTag
-    let s:endCommentTag     = g:DoxygenToolkit_endCommentTag
-    let s:startCommentBlock = g:DoxygenToolkit_startCommentBlock
-    let s:interCommentBlock = g:DoxygenToolkit_interCommentBlock
-    let s:endCommentBlock   = g:DoxygenToolkit_endCommentBlock
+    let s:startCommentTag   = g:SnifferToolkit_startCommentTag
+    let s:interCommentTag   = g:SnifferToolkit_interCommentTag
+    let s:endCommentTag     = g:SnifferToolkit_endCommentTag
+    let s:startCommentBlock = g:SnifferToolkit_startCommentBlock
+    let s:interCommentBlock = g:SnifferToolkit_interCommentBlock
+    let s:endCommentBlock   = g:SnifferToolkit_endCommentBlock
   else
     let s:startCommentTag   = "## "
     let s:interCommentTag   = "# "
@@ -822,7 +808,7 @@ function! s:InitializeParameters()
   let s:commentsBackup = &comments
   let &comments        = ""
   let s:cinoptionsBackup = &cinoptions
-  let &cinoptions        = g:DoxygenToolkit_cinoptions
+  let &cinoptions        = g:SnifferToolkit_cinoptions
   " Compatibility with c/c++ IDE plugin
   let s:timeoutlenBackup = &timeoutlen
   let &timeoutlen = 0
@@ -866,10 +852,10 @@ endfunction
 """"""""""""""""""""""""""
 " Shortcuts...
 """"""""""""""""""""""""""
-command! -nargs=0 Dox :call <SID>DoxygenCommentFunc()
-command! -nargs=0 DoxFl :call <SID>DoxygenFileFunc()
-command! -nargs=0 DoxCls :call <SID>DoxygenClassFunc()
-command! -nargs=0 DoxBlock :call <SID>DoxygenBlockFunc()
+command! -nargs=0 Sni :call <SID>SnifferCommentFunc()
+command! -nargs=0 SniFl :call <SID>SnifferFileFunc()
+command! -nargs=0 SniCls :call <SID>SnifferClassFunc()
+command! -nargs=0 SniBlock :call <SID>SnifferBlockFunc()
 
 
 
