@@ -1,19 +1,67 @@
-let loaded_DoxygenToolkit = 1
-"echo 'Loading DoxygenToolkit...'
-let s:licenseTag = "Copyright (C) \<enter>\<enter>"
-let s:licenseTag = s:licenseTag . "This program is free software; you can redistribute it and/or\<enter>"
-let s:licenseTag = s:licenseTag . "modify it under the terms of the GNU General Public License\<enter>"
-let s:licenseTag = s:licenseTag . "as published by the Free Software Foundation; either version 2\<enter>"
-let s:licenseTag = s:licenseTag . "of the License, or (at your option) any later version.\<enter>\<enter>"
-let s:licenseTag = s:licenseTag . "This program is distributed in the hope that it will be useful,\<enter>"
-let s:licenseTag = s:licenseTag . "but WITHOUT ANY WARRANTY; without even the implied warranty of\<enter>"
-let s:licenseTag = s:licenseTag . "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\<enter>"
-let s:licenseTag = s:licenseTag . "GNU General Public License for more details.\<enter>\<enter>"
-let s:licenseTag = s:licenseTag . "You should have received a copy of the GNU General Public License\<enter>"
-let s:licenseTag = s:licenseTag . "along with this program; if not, write to the Free Software\<enter>"
-let s:licenseTag = s:licenseTag . "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.\<enter>"
-
 " Common standard constants
+let s:sniffer_brief_defalut_string       = "Description Words ..."
+let s:sniffer_phpversion_default_string  = "PHP version 5"
+let s:sniffer_category_default_string    = "PHP"
+let s:sniffer_package_default_string     = "Moji"
+let s:sniffer_version_default_string     = "Release: @package_version@"
+let s:sniffer_author_default_string      = "Gang Ji <gang.ji@moji.com>"
+let s:sniffer_copyright_defalut_string   = "2014-2016 Moji Fengyun Software Technology Development Co., Ltd."
+let s:sniffer_license_defalut_string     = "license from Moji Fengyun Software Technology Development Co., Ltd."
+let s:sniffer_link_default_string        = "http://www.moji.com"
+
+if !exists("g:DoxygenToolkit_brief_string")
+  let g:DoxygenToolkit_brief_string = s:sniffer_brief_defalut_string
+endif
+if !exists("g:DoxygenToolkit_phpversion_string")
+  let g:DoxygenToolkit_phpversion_string = s:sniffer_phpversion_default_string
+endif
+if !exists("g:DoxygenToolkit_category_string")
+  let g:DoxygenToolkit_category_string = s:sniffer_category_default_string
+endif
+if !exists("g:DoxygenToolkit_package_string")
+  let g:DoxygenToolkit_package_string = s:sniffer_package_default_string
+endif
+if !exists("g:DoxygenToolkit_version_string")
+  let g:DoxygenToolkit_version_string = s:sniffer_version_default_string
+endif
+if !exists("g:DoxygenToolkit_author_string")
+  let g:DoxygenToolkit_author_string = s:sniffer_author_default_string
+endif
+if !exists("g:DoxygenToolkit_copyright_string")
+  let g:DoxygenToolkit_copyright_string = s:sniffer_copyright_defalut_string
+endif
+if !exists("g:DoxygenToolkit_license_string")
+  let g:DoxygenToolkit_license_string = s:sniffer_license_defalut_string
+endif
+if !exists("g:DoxygenToolkit_link_string")
+  let g:DoxygenToolkit_link_string = s:sniffer_link_default_string
+endif
+
+if !exists("g:DoxygenToolkit_categoryTag_pre")
+    let g:DoxygenToolkit_categoryTag_pre = "@category "
+endif
+if !exists("g:DoxygenToolkit_packageTag_pre")
+    let g:DoxygenToolkit_packageTag_pre = "@package "
+endif
+if !exists("g:DoxygenToolkit_versionTag_pre")
+  let g:DoxygenToolkit_versionTag_pre = "@version "
+endif
+if !exists("g:DoxygenToolkit_authorTag_pre")
+  let g:DoxygenToolkit_authorTag_pre = "@author "
+endif
+if !exists("g:DoxygenToolkit_copyrightTag_pre")
+  let g:DoxygenToolkit_copyrightTag_pre = "@copyright "
+endif
+if !exists("g:DoxygenToolkit_licenseTag_pre")
+  let g:DoxygenToolkit_licenseTag_pre = "@license"
+endif
+if !exists("g:DoxygenToolkit_linkTag_pre")
+  let g:DoxygenToolkit_linkTag_pre = "@link"
+endif
+
+if !exists("g:DoxygenToolkit_blockTag")
+  let g:DoxygenToolkit_blockTag = "@name "
+endif
 if !exists("g:DoxygenToolkit_briefTag_pre")
   let g:DoxygenToolkit_briefTag_pre = "@brief "
 endif
@@ -46,30 +94,6 @@ if !exists("g:DoxygenToolkit_blockHeader")
 endif
 if !exists("g:DoxygenToolkit_blockFooter")
   let g:DoxygenToolkit_blockFooter = ""
-endif
-if !exists("g:DoxygenToolkit_licenseTag")
-  let g:DoxygenToolkit_licenseTag = s:licenseTag
-endif
-if !exists("g:DoxygenToolkit_fileTag")
-  let g:DoxygenToolkit_fileTag = "@file "
-endif
-if !exists("g:DoxygenToolkit_authorTag")
-  let g:DoxygenToolkit_authorTag = "@author "
-endif
-if !exists("g:DoxygenToolkit_dateTag")
-  let g:DoxygenToolkit_dateTag = "@date "
-endif
-if !exists("g:DoxygenToolkit_versionTag")
-  let g:DoxygenToolkit_versionTag = "@version "
-endif
-if !exists("g:DoxygenToolkit_undocTag")
-  let g:DoxygenToolkit_undocTag = "DOX_SKIP_BLOCK"
-endif
-if !exists("g:DoxygenToolkit_blockTag")
-  let g:DoxygenToolkit_blockTag = "@name "
-endif
-if !exists("g:DoxygenToolkit_classTag")
-  let g:DoxygenToolkit_classTag = "@class "
 endif
 
 if !exists("g:DoxygenToolkit_cinoptions")
@@ -171,32 +195,6 @@ endif
 
 
 """"""""""""""""""""""""""
-" Doxygen license comment
-""""""""""""""""""""""""""
-function! <SID>DoxygenLicenseFunc()
-  call s:InitializeParameters()
-
-  " Test authorName variable
-  if !exists("g:DoxygenToolkit_authorName")
-    let g:DoxygenToolkit_authorName = input("Enter name of the author (generally yours...) : ")
-  endif
-  mark d
-  let l:date = strftime("%Y")
-  exec "normal O".strpart( s:startCommentBlock, 0, 1 )
-  exec "normal A".strpart( s:startCommentBlock, 1 ).substitute( g:DoxygenToolkit_licenseTag, "\<enter>", "\<enter>".s:interCommentBlock, "g" )
-  if( s:endCommentBlock != "" )
-    exec "normal o".s:endCommentBlock
-  endif
-  if( g:DoxygenToolkit_licenseTag == s:licenseTag )
-    exec "normal %jA".l:date." - ".g:DoxygenToolkit_authorName
-  endif
-  exec "normal `d"
-
-  call s:RestoreParameters()
-endfunction
-
-
-""""""""""""""""""""""""""
 " Doxygen file comment
 """"""""""""""""""""""""""
 function! <SID>DoxygenFileFunc()
@@ -204,17 +202,17 @@ function! <SID>DoxygenFileFunc()
 
   " Begin to write skeleton
   let l:insertionMode = s:StartDocumentationBlock()
-  exec "normal ".l:insertionMode." ".s:interCommentTag.g:DoxygenToolkit_briefString
+  exec "normal ".l:insertionMode." ".s:interCommentTag.g:DoxygenToolkit_brief_string
   mark d
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_phpversionTag
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_phpversion_string
   exec "normal o".s:interCommentTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_categoryTag.g:DoxygenToolkit_category_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_packageTag.g:DoxygenToolkit_package_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_author_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_copyrightTag.g:DoxygenToolkit_copyright_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_licenseTag.g:DoxygenToolkit_license_string
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_linkTag.g:DoxygenToolkit_link_string
   if ( g:DoxygenToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
@@ -256,33 +254,6 @@ function! <SID>DoxygenClassFunc()
   call s:RestoreParameters()
   startinsert!
 endfunction
-
-
-""""""""""""""""""""""""""
-" Doxygen undocument function
-" C/C++ only!
-""""""""""""""""""""""""""
-function! <SID>DoxygenUndocumentFunc(blockTag)
-  call s:InitializeParameters()
-  let l:search = "#ifdef " . a:blockTag
-  " Save cursor position and go to the begining of the file
-  mark d
-  exec "normal gg"
-
-  while ( search(l:search, 'W') != 0 )
-    exec "normal O#ifndef " . g:DoxygenToolkit_undocTag
-    exec "normal j^%"
-    if ( g:DoxygenToolkit_endCommentTag == "" )
-      exec "normal o#endif // " . g:DoxygenToolkit_undocTag 
-    else
-      exec "normal o#endif /* " . g:DoxygenToolkit_undocTag . " */"
-    endif
-  endwhile
-
-  exec "normal `d"
-  call s:RestoreParameters()
-endfunction
-
 
 
 """"""""""""""""""""""""""
@@ -896,9 +867,9 @@ endfunction
 " Shortcuts...
 """"""""""""""""""""""""""
 command! -nargs=0 Dox :call <SID>DoxygenCommentFunc()
-command! -nargs=0 DoxLic :call <SID>DoxygenLicenseFunc()
-command! -nargs=0 DoxFile :call <SID>DoxygenFileFunc()
+command! -nargs=0 DoxFl :call <SID>DoxygenFileFunc()
 command! -nargs=0 DoxCls :call <SID>DoxygenClassFunc()
-command! -nargs=1 DoxUndoc :call <SID>DoxygenUndocumentFunc(<q-args>)
 command! -nargs=0 DoxBlock :call <SID>DoxygenBlockFunc()
+
+
 
