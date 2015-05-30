@@ -28,3 +28,11 @@ let g:SnifferToolkit_license_string     = "license from Moji Fengyun Software Te
 let g:SnifferToolkit_link_string        = "http://www.moji.com"
 "}
 ```
+
+## 使用
+```
+:Sni ＃函数头 & 其他
+:SniFl  # 文件头
+:SniCls # 类头
+:SniBlock # 代码块
+```
